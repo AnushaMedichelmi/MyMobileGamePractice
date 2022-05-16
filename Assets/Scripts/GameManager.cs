@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         mainCamera = Camera.main;
         lives = maxNumLives;
-       // StartCoroutine(SpawnAsteroids());
+        StartCoroutine(SpawnAsteroids());
     }
     #endregion
 
@@ -73,9 +73,10 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            SpawnAsteroid();
+            
 
             yield return new WaitForSeconds(Random.Range(2f, 8f));
+            SpawnAsteroid();
         }
     }
 

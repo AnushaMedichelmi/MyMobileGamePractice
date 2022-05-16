@@ -24,8 +24,9 @@ public class ObjectPool : MonoBehaviour
 		{
 			GameObject obj = GameObject.Instantiate(prefab) as GameObject;
 			obj.transform.parent = parent;
-			obj.SetActive(false);
+			
 			pool.Enqueue(obj);
+			obj.SetActive(false);
 		}
 	}
 	#endregion
