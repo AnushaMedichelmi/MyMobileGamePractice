@@ -79,6 +79,7 @@ public class ShipScript : MonoBehaviour
     private void Shoot()
     {
         BulletScript bullet = PoolManager.Instance.Spawn(Constants.BULLET_PREFAB_NAME).GetComponent<BulletScript>();
+        bullet.gameObject.SetActive(true);
         bullet.SetPosition(launcher.position);
         bullet.SetTrajectory(bullet.transform.position + transform.forward);
     }
